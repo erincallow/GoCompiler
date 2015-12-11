@@ -1,0 +1,31 @@
+Scope: 
+Name: f  Type: rune
+Name: x  Type: boolean
+Scope: 
+Name: h  Type: string
+Scope: 
+Name: wow  Type: float
+Scope: 
+Name: me  Type: j
+Name: boo  Type: int
+Name: j  Type: boolean
+Name: t  Type: int
+Name: u  Type: int
+Name: x  Type: int
+Name: y  Type: float
+Name: num  Type: float
+Scope: 
+Name: false  Type: boolean
+Name: boo  Type: int
+Name: f  Type: float
+Name: j  Type: num
+Name: p  Type: float
+Name: q  Type: int
+Name: r  Type: float
+Name: s  Type: rune
+Name: u  Type: int
+Name: x  Type: float
+Name: y  Type: int
+Name: z  Type: int
+Name: true  Type: boolean
+Name: num  Type: int

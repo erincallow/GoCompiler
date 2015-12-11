@@ -1,0 +1,13 @@
+Scope: 
+Name: x  Type: int
+Name: y  Type: slice -> int
+Scope: 
+Name: false  Type: boolean
+Name: bob  Type: test
+Name: test  Type: slice -> string
+Name: h  Type: array -> array -> array -> rune
+Name: k  Type: slice -> string
+Name: t  Type: array -> string
+Name: true  Type: boolean
+Name: num  Type: int
+Name: main  Type: int

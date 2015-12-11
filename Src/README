@@ -1,0 +1,75 @@
+This is our GoLite project for Comp 520, Winter 2015
+
+Students: Erin Callow and Daniel Biggs
+
+Timeline:
+
+MILESTONE 1
+
+Tuesday: Scanner and parser written
+Wednesday: Parser fixed, tree.h written
+Thursday: Despair, pain, and misery
+Friday: Erin rewrote expressions/operators with a multi-level hierarchy. Daniel reincorporated upper levels of the grammar.
+Saturday: More despair with a bit of misery on the side. Finished tree.h and tree.c (hopefully) and started pretty.c. Need to fix scanner/parser.
+
+Sunday as of 6:30 p.m.: I'm not entirely convinced our programs haven't become a malignant SkyNet/AM determined to torture us by giving us small hints of progress and then taking it all away in a maelstrom of errors. Have reintegrated almost all the upper levels of grammar after starting over from first principles. Have written tree.h, tree.c, pretty.h, and pretty.c (including weeding, which was actually fun to write). Once we add the last fixes to scanner/parser, fix the inevitable tree/pretty errors, and add a bit more functionality, we'll be done.
+
+SkyNet twisted humanity's bodies. AM twisted their minds. GoLite is twisting our very notions of optimism and pessimism.
+
+Sunday as of 10:30 p.m.: Things are working. The parser and scanner seem perfect, and we're soon going to test them with our up-to-date tree and pretty files. A few extra bits of functionality to toss in, but we may be done soon.
+
+inb4 infinite segfaults
+
+Monday as of 02:30 a.m.: Tree.c and tree.h have been debugged. Pretty will follow. Still need to add those extra bits of functionality, but we're very, very close to being done.
+
+Monday as of 2:00 p.m.: No errors upon compilation. Now we get to look at all the logical errors. By Zeno's paradox, this may go on forever.
+
+Monday as of 4:40 p.m.: Slowly fixing logical errors. I miss the days of shift/reduce conflicts. At least there was a slight sense of satisfaction upon resolving those.
+
+Monday as of 7:14 p.m.: We're less not-done than before. Our compiler accepts about 90% of what it should and gives proper error messages for all bad programs - we're just dealing with a few false negatives. Finally going to add in that extra functionality we keep referring to.
+
+Monday as of 8:26: We're done. A bit of functionality is missing (see 'DesignDecisions'), but we've spent every second of time we could spare during the last week working on this, and we have too much else to do. If we had even one or two more days, we could implement these last few things, but we're done.
+
+Monday as of 9:22: Did as many last-minute things as possible. See DesignDecisions. Going to fix prettyprinter and then done.
+
+Monday as of 11:05: Still a few issues, but the output of prettyprint can be compiled by the compiler. Submitting once and for all.
+
+
+
+HOW TO USE: run 'make' in the appropriate directory to create an executable named GoCompiler. Cat the program you want compiled to GoCompiler, and the prettyprinter will use stdout to print its output
+
+Final note: which submissions came from which GitHub account or how many of those green/red points are associated with each individual aren't an accurate reflection of how much each group member contributed: since Erin is pathologically afraid of git, most submissions came from Daniel's computer even though each group member contributed roughly equal amounts of time/effort to the project as a whole
+
+MILESTONE 2
+
+Saturday Feb 21st
+Started GoSymbol.c, GoSymbol.h and started adding necessary functionality to GoTree.h
+
+end of saturday feb 21st:
+Erin worked on GoSymbol, Daniel added functionality that was missing in milestone 1.
+
+Monday, February 23rd: Erin wrote GoSymbol.c and GoSymbol.h, while Daniel extended milestone 1 functionality, wrote GoType.c, and checked over GoSymbol.c. Some questions to ask the TA's (we probably reduplicated some functionality between the two files; we need to figure out how to add recursive types [e.g., slices] and function types into the symbol table), but we may be done in time for Daniel to leave on Wednesday.
+
+Tuesday, February 24th, 01:19: Daniel updated makefile and main and wrote Type.h All that's left is to add in the functionality skipped over in milestone 2 (this), debug, and then offer the slaughtered lambs to complete the bargain.
+
+Tuesday, February 24th, 16:31: Daniel is fixing parts of milestone 1, while Erin is combining the symbol table that she wrote (which is basically also a type-checker) with the type checker that Daniel wrote (which is basically also a symbol file). Today Daniel and Erin learned the importance of communication.
+
+Monday, March 2nd, 12:58 a.m.: Daniel is checking everything in milestone 1 against the test programs provided while Erin rebuilds the type checker out of her overreaching symbol table and Daniel's first draft of the type checker
+
+Daniel and Erin have learned to communicate and to debug PERIODICALLY
+
+Monday, March 2nd, 16:14: Daniel just fixed an issue with comments - the compiler now accepts almost all VALID programs from milestone 1
+
+Tuesday, MArch 2nd, 1:21: Daniel rewrote part of the parser grammar (nth time's the charm as n -> infinity...) and fixed Scanner. We now accept all VALID programs except for a single case where a weird malloc error is thrown
+
+Tuesday, March 2nd, 2:01: Daniel is awesome. All 33 VALID programs now compile with no errors.
+
+Tuesday March 2nd, 16:49: Daniel is going through INVALID programs and modifying the weeder to take care of any errors not already weeded out
+
+Wednesday, March 3rd, 2:19: Daniel has finished going through INVALID and almost all (~95%) halt appropriately. Daniel also added support for the -pptype flag in pretty, and it works
+
+Thursday, March 4th, 1:07: Daniel has checked that the output of pretty is compilable again (i.e., the invariant), and it works perfectly in almost all cases. Now to redirect output to the appropriate files and write the type-error programs. Erin continues to work on type checker.
+
+Thursday, March 4th: 4:29: Sleep is for the weak. Daniel has implemented line numbers, error.c/error.h, and has written a bash script (run) that takes in the program as well as any flags and sorts out what output goes where/is printed to console. Once Erin's type checker is finished/integrated, the project will be essentially complete (save for writing invalid programs and DesignDecisions)
+
+Thursday, March 4th, 17:29: Daniel has fixed up the pretty printer so that everything is nearly perfect.

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+FILENAME=$1
+NEWFILE=$(dirname $FILENAME)/$(basename $FILENAME .go)
+SUFFIX2=".symtab"
+SUFFIX3=".cpp"
+if [[ ( $2 == "-pptype" || $3 == "-pptype" ) && ( $2 == "-dumpsymtab" || $3 == "-dumpsymtab" ) ]]
+then
+        SUFFIX1=".pptype.go"
+        cat $1 | ./GoCompiler $NEWFILE$SUFFIX1 -pptype -dumpsymtab $NEWFILE$SUFFIX2 $NEWFILE$SUFFIX3
+elif [[ $2 == "-pptype" ]]
+then
+        SUFFIX1=".pptype.go"
+        cat $1 | ./GoCompiler $NEWFILE$SUFFIX1 -pptype $NEWFILE$SUFFIX3
+elif [[ $2 == "-dumpsymtab" ]]
+then
+        SUFFIX1=".pretty.go"
+        cat $1 | ./GoCompiler $NEWFILE$SUFFIX1 -dumpsymtab $NEWFILE$SUFFIX2 $NEWFILE$SUFFIX3
+else
+        SUFFIX1=".pretty.go"
+	printf "[%s]\n" $NEWFILE
+        cat $1 | ./GoCompiler $NEWFILE$SUFFIX1 $NEWFILE$SUFFIX3
+fi
+
+#if [[ $2 == "-pptype" || $3 == "-pptype" ]]
+#then
+#       SUFFIX1=".pptype.go"
+#       cat $1 | ./GoCompiler $NEWFILE$SUFFIX1 -pptype
+#else
+#       SUFFIX1=".pretty.go"
+#       cat $1 | ./GoCompiler $NEWFILE$SUFFIX1
+#fi

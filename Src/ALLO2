@@ -1,0 +1,20 @@
+#include <stdio.h>
+[] char * k;
+char * [7]  t;
+char [2]  [2]  [2]  h;
+typedef struct f {
+int x;
+;
+float y;
+
+} f;
+int main(int x, [] int y){
+	h[1][1][1]='p';
+	k=append(k,"hi");
+	f p;
+
+	f.y=9.000000;
+	p.x=1;
+
+}
+

@@ -1,0 +1,11 @@
+Just an FYI on where we stand with our project:
+
+	- please run the run file inside of Src.
+	- Structs and function declarations are not implemented in the typechecker (YET!)
+	- The pptype call will fail on arrays and slices but likes everything else
+	- The dumpsymtab call works
+	- We have two files, test.go and test1.go. They both have valid outputs. test.go checks for everything but structs, arrays, slices and func decs. And will output in pptype and dumpsymtab perfectly. test1.go checks arrays and slices, and will work with the dumpsymtab call, but not the pptype.
+
+Whatever we are missing, we intent on implementing in the near future. 
+
+
